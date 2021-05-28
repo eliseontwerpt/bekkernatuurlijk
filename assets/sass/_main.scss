@@ -1,0 +1,69 @@
+html{
+  overflow-x: hidden;
+  padding-top: 150px;
+}
+
+body{
+
+    background-size: cover;
+    background-position: 0% 0%;
+    }
+
+section{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    }
+
+a {    
+
+    }
+a:hover{
+
+    text-decoration:none;
+    }
+.material-icons {
+    font-size: 200%;
+    }    
+.table {   
+    thead{
+        tr{
+            th, td{
+                    border: 0;
+                    text-align: center;
+                    @media(max-width:550px){
+                        font-size: 0.7rem;
+
+                    }
+                }
+            }
+        }
+    tbody {
+        tr { 
+            th, td{
+                border: 0;
+                text-align: center;
+                font-weight: bold;
+                @media(max-width:550px){
+                        font-size: 0.7rem;
+                        word-wrap: break-word;
+                    }
+            }
+        }
+    }
+}
+
+.overly {
+  position: relative;
+  &:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: #000;
+  }
+}

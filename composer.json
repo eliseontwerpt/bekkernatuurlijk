@@ -1,0 +1,8 @@
+{
+    "name": "eliseontwerpt/bekkernatuurlijk-theme",
+    "type": "october-theme",
+    "description": "Bekkernatuurlijk",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

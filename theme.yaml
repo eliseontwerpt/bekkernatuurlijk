@@ -1,0 +1,104 @@
+name: Bekkernatuurlijk
+description: ''
+author: EliseOntwerpt
+homepage: 'http://www.eliseontwerpt.nl'
+author_code: EliseOntwerpt
+code: bekkernatuurlijk
+parent: ''
+database: '1'
+form:
+    tabs:
+        fields:
+            theme_site_name:
+                label: 'Naam Website'
+                comment: 'The website name as it should appear on the front-end'
+                default: Bekkernatuurlijk
+                tab: Main
+            theme_background_image:
+                label: 'Achtergrond Homepagina'
+                type: mediafinder
+                mode: image
+                tab: Main
+            theme_logo_uk:
+                label: Logo
+                comment: 'Logo van de website.'
+                type: mediafinder
+                mode: image
+                tab: Main
+            theme_logo_nl:
+                label: 'Nederlands Logo'
+                comment: 'Dit logo is alleen nodig als het logo Tweetalig is.'
+                type: mediafinder
+                mode: image
+                tab: Main
+            emailadres:
+                label: E-mail
+                default: info@bbekkernatuurlijk.nl
+                tab: Bedrijfsgegevens
+            bedrijfsnaam_details_section:
+                label: Aanschrijftitel
+                type: section
+                tab: Bedrijfsgegevens
+            uk_naam:
+                label: Engels
+                type: text
+                tab: Bedrijfsgegevens
+                default: Bekkernatuurlijk
+            nl_naam:
+                label: Nederlands
+                type: text
+                tab: Bedrijfsgegevens
+                default: Bekkernatuurlijk
+            user_details_section:
+                label: 'Adres gegevens'
+                type: section
+                tab: Bedrijfsgegevens
+            adres_straat:
+                label: Straat
+                type: text
+                tab: Bedrijfsgegevens
+                default: 'Kadijk 4'
+            adres_postcode_plaats:
+                label: 'Postcode Plaats'
+                type: text
+                tab: Bedrijfsgegevens
+                default: '9747 AT Groningen'
+            kvk_details_section:
+                label: 'Kvk nummer'
+                type: section
+                tab: Bedrijfsgegevens
+            kvk_nummer:
+                type: text
+                tab: Bedrijfsgegevens
+                default: '00000000'
+            theme_primary_color:
+                label: 'Primary color'
+                type: colorpicker
+                assetVar: primary-color
+                tab: Kleurenschema
+            theme_secondary_color:
+                label: 'Secondary color'
+                type: colorpicker
+                assetVar: secondary-color
+                tab: Kleurenschema
+            theme_third_color:
+                label: 'Third color'
+                type: colorpicker
+                assetVar: third-color
+                tab: Kleurenschema
+            theme_navbar_color:
+                label: 'Color navbar'
+                type: colorpicker
+                assetVar: navbar-color
+                tab: Kleurenschema
+            theme_footer_color:
+                label: 'Color Footer'
+                type: colorpicker
+                assetVar: footer-color
+                tab: Kleurenschema
+            theme_website_item_color:
+                label: 'Background Website Item'
+                type: colorpicker
+                assetVar: website-color
+                tab: Kleurenschema
+

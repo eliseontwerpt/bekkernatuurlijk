@@ -1,0 +1,34 @@
+.navigation {    
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100000;
+}
+
+#navbar{
+    //min-height: 150px;
+    widht: 100%;
+    h1{
+        font-size:calc(16px + 1.5vw); 
+    }
+}
+
+.navigation{
+    button[aria-expanded="true"]{    
+        
+         .open-icon{ 
+            display: none;
+        }
+        .close-icon{
+            display: inline;
+            }
+    }
+    button[aria-expanded="false"]{
+        .open-icon{ 
+            display: inline;
+        }
+        .close-icon{
+           display: none;
+        }
+    }
+}
