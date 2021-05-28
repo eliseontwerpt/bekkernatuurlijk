@@ -1,25 +1,36 @@
-==
 <header class="navigation">
-    <nav class="navbar navbar-expand-lg" id="navbar">
+    <nav class="navbar navbar-expand-lg justify-content-between" id="navbar">
         <div class="container">            
-            <a class="navbar-brand text-center"  href="/"><img id="nav-brand" src="{{ this.theme.logo.getPath|resize('80') }}"/><h1 class="text-center" id="nav-header">Harm Jan's</h1></a>      
+           <a class="navbar-brand " href="{{ 'home'|page }}">		  	
+            {% if activeLocale == 'nl' and this.theme.theme_logo_nl is not empty %}
+                <img src="{{ this.theme.theme_logo_nl|media|resize('200') }}" id="nav-brand" >
+            {% elseif this.theme.theme_logo_uk is not empty %}
+                <img src="{{ this.theme.theme_logo_uk|media|resize('200')}}" id="nav-brand">
+            {% else %}
+                <img src="{{ 'assets/images/logo.png'|theme|resize('200') }}" id="nav-brand" >
+            {% endif %}	
+            <!--h1>{{ this.theme.theme_site_name |_ }}</h1-->	           
+		  </a>
+          <a class="navbar-brand " href="{{ 'home'|page }}">
+               <h1 id="nav-header"> {{ this.theme.theme_site_name |_ }}</h1> 
+          </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="material-icons open-icon">&#xe5d2;</span> 
                <span class="material-icons close-icon">&#xe5cd;</span>  
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">                
-                <ul class="navbar-nav mr-auto text-center">
-                     <li class="nav-item">
-                        <a class="nav-link" href="{{ 'home'|page }}">{{ 'Brewdays'|_ }}</a>    
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ 'recipes/recipes'|page }}">{{ 'Recipes'|_ }}</a>    
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="nav" href="{{ 'styles/beerstyles'|page }}">{{ 'Beerstyles'|_ }}</a>    
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ 'hops/hops'|page }}">{{ 'Hops'|_ }}</a>    
+            <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">                
+                <ul class="navbar-nav ml-5">
+                   
+                   <li class="nav-item dropdown navbar-nav ">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="text-uppercase font-weight-bold border border-info">{{ activeLocale }}</span>
+                        </a> 
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          
+                            <a class="dropdown-item" href="#" data-request="onSwitchLocale" data-request-data="locale: 'en'">English</a>,
+                            <a class="dropdown-item" href="#" data-request="onSwitchLocale" data-request-data="locale: 'nl'">Nederlands</a>
+                        </div>
                     </li>
                 </ul>
             </div>
